@@ -14,7 +14,7 @@ class FaceCollectionViewController: UICollectionViewController {
     var faces = [Face]()
     
     func loadFaces(){
-        for _ in 0..<1{
+        for _ in 0..<25{
             faces.append(Face(width:90.0,height:90.0))
         }
     }
@@ -46,13 +46,13 @@ class FaceCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 5
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return 5
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -8,5 +8,16 @@
 import UIKit
 
 class FaceCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var FaceButton: UIButton!    
+    var FaceButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    func initview(){
+        self.addSubview(FaceButton)
+    }
+    override init(frame: CGRect) {
+        super.init(frame:frame)
+        FaceButton.backgroundColor = UIColor.gray
+        self.addSubview(FaceButton)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
