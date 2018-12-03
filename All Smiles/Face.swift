@@ -8,7 +8,7 @@
 import UIKit
 
 class Face{
-    var issmile:Int{
+    var issmile = 0{
         didSet{
             if issmile == 0{
                 button.backgroundColor = UIColor.red
@@ -26,7 +26,6 @@ class Face{
         button.translatesAutoresizingMaskIntoConstraints = false
         button.widthAnchor.constraint(equalToConstant:width).isActive = true
         button.heightAnchor.constraint(equalToConstant: height).isActive = true
-        button.setTitle("H", for: .normal)
-        issmile = Int(arc4random() % 2)
+        button.backgroundColor = UIColor.brown
     }
 }
