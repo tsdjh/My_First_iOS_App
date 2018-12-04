@@ -20,6 +20,21 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return facecell
     }
     
+    @IBOutlet weak var nextLevelButton: UIButton!
+    @IBAction func nextLevel(_ sender: UIButton) {
+        level += 1
+        if level < 10{
+            (row,column) = rowAndColumnInAllLevels[level - 2]
+        }
+        view.viewWithTag(1)!.removeFromSuperview()
+        FaceMatrix.removeAll()
+        makeFaceCellMatrix()
+    }
+    
+    @IBAction func close(){
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,22 +43,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     let screenWidth = UIScreen.main.bounds.width
     var FaceMatrix = [Face]()
-    var level = 1{
-        didSet{
-            sleep(1)
-            view.viewWithTag(1)!.removeFromSuperview()
-            FaceMatrix.removeAll()
-            if level < 9{
-                (row,column) = rowAndColumnInAllLevels[level - 2]
-                makeFaceCellMatrix()
-            }            
-        }
-    }
+    var level = 1
     var row = 2
     var column = 2
+    var solveChance = 3
     let rowAndColumnInAllLevels = [(3,2),(3,3),(4,3),(4,4),(5,5),(6,6),(7,7),(8,8)]
+    var solution = [(Int,Int)]()
     
     func makeFaceCellMatrix(){
+        disableNextLevelButton()
         let layout = UICollectionViewFlowLayout()
         var sidelength = screenWidth / (1.1 * CGFloat(column) + 0.1)
         if sidelength > 100{
@@ -90,8 +98,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         }
         face(i0,j0).issmile = !face(i0, j0).issmile
         if checkAllSmiles(){
-            nextLevel()
-            }
+            enableNextLevelButton()
+        }
     }
     
     func checkAllSmiles() -> Bool
@@ -104,9 +112,22 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return true
     }
     
-    func nextLevel(){
-        level += 1
+    func disableNextLevelButton(){
+        nextLevelButton.isUserInteractionEnabled = false
+        nextLevelButton.setTitleColor(UIColor.white, for: .normal)
+        nextLevelButton.backgroundColor = UIColor.lightGray
     }
+    
+    func enableNextLevelButton(){
+        nextLevelButton.isUserInteractionEnabled = true
+        nextLevelButton.setTitleColor(UIColor.blue, for: .normal)
+        nextLevelButton.backgroundColor = UIColor.green
+    }
+    
+    func ensureSolutionExists(){
+        
+    }
+    
 }
 
 extension Bool{
