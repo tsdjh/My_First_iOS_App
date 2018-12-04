@@ -13,6 +13,7 @@
 		9D2BA74821B3B37100EFCD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2BA74721B3B37100EFCD08 /* Assets.xcassets */; };
 		9D2BA74B21B3B37100EFCD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2BA74921B3B37100EFCD08 /* LaunchScreen.storyboard */; };
 		9D46F36821B3BB8400DBC39D /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46F36721B3BB8400DBC39D /* Face.swift */; };
+		9D5E8E5F21B63F8500FB25B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5E8E5E21B63F8500FB25B7 /* MainViewController.swift */; };
 		9DB5577A21B4D3BB00C4EC5B /* FaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5577921B4D3BB00C4EC5B /* FaceCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		9D2BA74A21B3B37100EFCD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D2BA74C21B3B37100EFCD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D46F36721B3BB8400DBC39D /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		9D5E8E5E21B63F8500FB25B7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9DB5577921B4D3BB00C4EC5B /* FaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				9D2BA74921B3B37100EFCD08 /* LaunchScreen.storyboard */,
 				9D2BA74C21B3B37100EFCD08 /* Info.plist */,
 				9D46F36721B3BB8400DBC39D /* Face.swift */,
+				9D5E8E5E21B63F8500FB25B7 /* MainViewController.swift */,
 			);
 			path = "All Smiles";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				9D2BA74321B3B36F00EFCD08 /* ViewController.swift in Sources */,
 				9D46F36821B3BB8400DBC39D /* Face.swift in Sources */,
 				9D2BA74121B3B36F00EFCD08 /* AppDelegate.swift in Sources */,
+				9D5E8E5F21B63F8500FB25B7 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

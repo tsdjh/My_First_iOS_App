@@ -8,24 +8,31 @@
 import UIKit
 
 class Face{
-    var issmile = 0{
+    var issmile:Bool{
         didSet{
-            if issmile == 0{
-                button.backgroundColor = UIColor.red
+            if issmile {
+                button.backgroundColor = UIColor.green
             }
             else
             {
-                button.backgroundColor = UIColor.green
+                button.backgroundColor = UIColor.red
             }
         }
     }
-    var button:UIButton
+    var button:UILabel
     init(width:CGFloat,height:CGFloat)
     {
-        button = UIButton()
+        button = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: width, height: height))
         button.translatesAutoresizingMaskIntoConstraints = false
         button.widthAnchor.constraint(equalToConstant:width).isActive = true
         button.heightAnchor.constraint(equalToConstant: height).isActive = true
-        button.backgroundColor = UIColor.brown
+        if Int(arc4random() % 2) == 0{
+            issmile = false
+            button.backgroundColor = UIColor.red
+        }
+        else{
+            issmile = true
+            button.backgroundColor = UIColor.green
+        }
     }
 }
