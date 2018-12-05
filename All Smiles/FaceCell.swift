@@ -15,5 +15,5 @@ class FaceCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) not implemented")
     }
-    var face = UILabel()
+    var face = UIButton()
 }

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Breakthrough Mode View Controller-->
         <scene sceneID="SUM-Jj-UWv">
             <objects>
-                <viewController id="l4v-vH-Gs3" customClass="ViewController" customModule="All_Smiles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l4v-vH-Gs3" customClass="BreakthroughModeViewController" customModule="All_Smiles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yvp-uL-luc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                         <rect key="frame" x="17" y="38" width="38" height="30"/>
                                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Solve"/>
+                                        <connections>
+                                            <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="x1U-jF-yzG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -57,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="nextLevelButton" destination="ZMv-32-NvI" id="wqg-ng-Kcv"/>
+                        <outlet property="solveButton" destination="wLQ-9n-RaU" id="Vie-Rk-A5k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5p-sT-LGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,6 +91,9 @@
                                         <rect key="frame" x="0.0" y="46" width="136" height="30"/>
                                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Custom Mode"/>
+                                        <connections>
+                                            <segue destination="6AM-dw-Sjd" kind="show" id="RTt-uG-cUa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -102,6 +109,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc5-zr-q6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404" y="-143.47826086956522"/>
+        </scene>
+        <!--Custom Mode View Controller-->
+        <scene sceneID="6T9-37-oKK">
+            <objects>
+                <viewController id="6AM-dw-Sjd" customClass="CustomModeViewController" customModule="All_Smiles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GJi-gN-PLb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY5-Pk-EAC">
+                                <rect key="frame" x="234" y="104" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="close" destination="l4v-vH-Gs3" eventType="touchUpInside" id="J74-Yq-EMR"/>
+                                    <action selector="close:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="gEA-Ar-cfp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hij-5a-mKA">
+                                <rect key="frame" x="232" y="189" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Solve"/>
+                                <connections>
+                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="vVK-Mr-sfP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oIb-Fe-4JO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdt-EW-JPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="-143"/>
         </scene>
     </scenes>
 </document>

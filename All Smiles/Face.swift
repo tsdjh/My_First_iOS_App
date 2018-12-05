@@ -8,31 +8,64 @@
 import UIKit
 
 class Face{
-    var issmile:Bool{
+    var isSad:Bool{
         didSet{
-            if issmile {
-                button.backgroundColor = UIColor.green
+            if isSad {
+                setSadStyle()
             }
             else
             {
-                button.backgroundColor = UIColor.red
+                setSmileStyle()
             }
         }
     }
-    var button:UILabel
+    
+    var isStepOfSolution:Bool{
+        didSet{
+            if isStepOfSolution{
+                setSolutionStepStyle()
+            }
+            else{
+                cancelSolutionStepStyle()
+            }
+        }
+    }
+    
+    var button:UIButton
+    
     init(width:CGFloat,height:CGFloat)
     {
-        button = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: width, height: height))
+        button = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: width, height: height))
+        button.isUserInteractionEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
         button.widthAnchor.constraint(equalToConstant:width).isActive = true
         button.heightAnchor.constraint(equalToConstant: height).isActive = true
+        isStepOfSolution = false
         if Int(arc4random() % 2) == 0{
-            issmile = false
-            button.backgroundColor = UIColor.red
+            isSad = true
+            setSadStyle()
         }
         else{
-            issmile = true
-            button.backgroundColor = UIColor.green
+            isSad = false
+            setSmileStyle()
         }
+    }
+    
+    func setSmileStyle(){
+        button.backgroundColor = UIColor.red
+        button.setBackgroundImage(UIImage(named: "Smile")!, for: .normal)
+    }
+    
+    func setSadStyle(){
+        button.backgroundColor = UIColor.green
+        button.setBackgroundImage(UIImage(named: "Sad")!, for: .normal)
+    }
+    
+    func setSolutionStepStyle(){
+        button.setImage(UIImage(named: "Tick"), for: .normal)
+    }
+    
+    func cancelSolutionStepStyle(){
+        button.setImage(nil, for: .normal)
     }
 }

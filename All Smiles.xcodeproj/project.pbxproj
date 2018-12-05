@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D1E9DAB21B81C9200F037C5 /* CustomModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1E9DAA21B81C9200F037C5 /* CustomModeViewController.swift */; };
 		9D2BA74121B3B36F00EFCD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2BA74021B3B36F00EFCD08 /* AppDelegate.swift */; };
-		9D2BA74321B3B36F00EFCD08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2BA74221B3B36F00EFCD08 /* ViewController.swift */; };
+		9D2BA74321B3B36F00EFCD08 /* BreakthroughModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2BA74221B3B36F00EFCD08 /* BreakthroughModeViewController.swift */; };
 		9D2BA74621B3B36F00EFCD08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2BA74421B3B36F00EFCD08 /* Main.storyboard */; };
 		9D2BA74821B3B37100EFCD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2BA74721B3B37100EFCD08 /* Assets.xcassets */; };
 		9D2BA74B21B3B37100EFCD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2BA74921B3B37100EFCD08 /* LaunchScreen.storyboard */; };
@@ -18,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D1E9DAA21B81C9200F037C5 /* CustomModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModeViewController.swift; sourceTree = "<group>"; };
 		9D2BA73D21B3B36F00EFCD08 /* All Smiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All Smiles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2BA74021B3B36F00EFCD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D2BA74221B3B36F00EFCD08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D2BA74221B3B36F00EFCD08 /* BreakthroughModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakthroughModeViewController.swift; sourceTree = "<group>"; };
 		9D2BA74521B3B36F00EFCD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D2BA74721B3B37100EFCD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D2BA74A21B3B37100EFCD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,13 +64,14 @@
 			children = (
 				9DB5577921B4D3BB00C4EC5B /* FaceCell.swift */,
 				9D2BA74021B3B36F00EFCD08 /* AppDelegate.swift */,
-				9D2BA74221B3B36F00EFCD08 /* ViewController.swift */,
+				9D2BA74221B3B36F00EFCD08 /* BreakthroughModeViewController.swift */,
 				9D2BA74421B3B36F00EFCD08 /* Main.storyboard */,
 				9D2BA74721B3B37100EFCD08 /* Assets.xcassets */,
 				9D2BA74921B3B37100EFCD08 /* LaunchScreen.storyboard */,
 				9D2BA74C21B3B37100EFCD08 /* Info.plist */,
 				9D46F36721B3BB8400DBC39D /* Face.swift */,
 				9D5E8E5E21B63F8500FB25B7 /* MainViewController.swift */,
+				9D1E9DAA21B81C9200F037C5 /* CustomModeViewController.swift */,
 			);
 			path = "All Smiles";
 			sourceTree = "<group>";
@@ -144,7 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DB5577A21B4D3BB00C4EC5B /* FaceCell.swift in Sources */,
-				9D2BA74321B3B36F00EFCD08 /* ViewController.swift in Sources */,
+				9D2BA74321B3B36F00EFCD08 /* BreakthroughModeViewController.swift in Sources */,
+				9D1E9DAB21B81C9200F037C5 /* CustomModeViewController.swift in Sources */,
 				9D46F36821B3BB8400DBC39D /* Face.swift in Sources */,
 				9D2BA74121B3B36F00EFCD08 /* AppDelegate.swift in Sources */,
 				9D5E8E5F21B63F8500FB25B7 /* MainViewController.swift in Sources */,
