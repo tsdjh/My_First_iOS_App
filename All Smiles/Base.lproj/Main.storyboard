@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6KB-cK-ame">
-                                <rect key="frame" x="151.5" y="599.5" width="72" height="68"/>
+                                <rect key="frame" x="151.5" y="589" width="72" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMv-32-NvI">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
@@ -51,7 +51,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6KB-cK-ame" firstAttribute="centerY" secondItem="yvp-uL-luc" secondAttribute="centerY" constant="300" id="1NY-cY-oZU"/>
+                            <constraint firstItem="6KB-cK-ame" firstAttribute="bottom" secondItem="yvp-uL-luc" secondAttribute="bottom" constant="-10" id="1NY-cY-oZU"/>
                             <constraint firstItem="ijd-IV-MPB" firstAttribute="trailing" secondItem="ZAF-A6-GyS" secondAttribute="trailing" constant="10" id="2dn-eE-1Kw"/>
                             <constraint firstItem="6KB-cK-ame" firstAttribute="centerX" secondItem="yvp-uL-luc" secondAttribute="centerX" id="6UJ-M5-1Kj"/>
                             <constraint firstItem="ZAF-A6-GyS" firstAttribute="top" secondItem="ijd-IV-MPB" secondAttribute="top" constant="10" id="X0Y-2v-xVh"/>
@@ -92,7 +92,7 @@
                                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Custom Mode"/>
                                         <connections>
-                                            <segue destination="6AM-dw-Sjd" kind="show" id="RTt-uG-cUa"/>
+                                            <segue destination="jbl-yi-QLx" kind="show" id="pgL-4s-uHL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -109,6 +109,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc5-zr-q6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404" y="-143.47826086956522"/>
+        </scene>
+        <!--Get Row And Column View Controller-->
+        <scene sceneID="M3I-bE-oV9">
+            <objects>
+                <viewController id="jbl-yi-QLx" customClass="GetRowAndColumnViewController" customModule="All_Smiles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dKZ-cs-kBi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSa-oa-DjU">
+                                <rect key="frame" x="248" y="93" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="rbZ-Jz-9OH"/>
+                                    <action selector="close:" destination="jbl-yi-QLx" eventType="touchUpInside" id="1Ko-xP-a54"/>
+                                    <action selector="replay:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="8Ai-Vr-HfP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jQ-A3-tE1">
+                                <rect key="frame" x="222" y="532" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ok"/>
+                                <connections>
+                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="aaM-M3-wRR"/>
+                                    <action selector="replay:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="QRT-aA-L1H"/>
+                                    <segue destination="6AM-dw-Sjd" kind="show" id="BvF-bb-ac0"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dD-40-xzM">
+                                <rect key="frame" x="124" y="231" width="251" height="156"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="k7p-29-mKD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahX-I3-R8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="-143.47826086956522"/>
         </scene>
         <!--Custom Mode View Controller-->
         <scene sceneID="6T9-37-oKK">
@@ -128,13 +171,26 @@
                                     <action selector="close:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="gEA-Ar-cfp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkl-aZ-9C3">
+                                <rect key="frame" x="228" y="290" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Replay"/>
+                                <connections>
+                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="vRt-Uc-KGs"/>
+                                    <action selector="replay:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="MBS-BG-aTg"/>
+                                    <segue destination="jbl-yi-QLx" kind="show" id="Fwo-Ws-xt9"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hij-5a-mKA">
-                                <rect key="frame" x="232" y="189" width="38" height="30"/>
+                                <rect key="frame" x="228" y="197" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Solve"/>
                                 <connections>
+                                    <action selector="askForSolution:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="4CJ-p1-TkA"/>
                                     <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="vVK-Mr-sfP"/>
+                                    <action selector="solve:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="o2w-Pd-wiA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,7 +200,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdt-EW-JPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="-143"/>
+            <point key="canvasLocation" x="1804" y="-143"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pgL-4s-uHL"/>
+    </inferredMetricsTieBreakers>
 </document>
