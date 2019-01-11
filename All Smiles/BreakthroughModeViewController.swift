@@ -2,84 +2,77 @@
 //  ViewController.swift
 //  All Smiles
 //
-//  Created by 王东宇 on 2018/12/2.
+//  Created by 钦明珑 on 2018/12/2.
 //
 
 import UIKit
 
-class BreakthroughModeViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-    let common = Common()
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return common.faces.FaceMatrix.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return common.collectionView(collectionView, indexPath)
-    }
-    
+// 闯关模式
+class BreakthroughModeViewController: Common,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+
+    // Common 类集中了两种玩法模式相同的代码
     @IBOutlet weak var nextLevelButton: UIButton!
+    
     @IBAction func nextLevel(_ sender: UIButton) {
+        // 进入下一关
         if level <= 8{
             level += 1
             savedLevel = level
+            // 删除原来的 collectionView
             view.viewWithTag(1)!.removeFromSuperview()
-            makeFaceCellMatrix()
+            createFaceCellMatrix()
+        }else{
+            // 如果通关，则移除所有除背景图片以外的子视图，并显示祝贺文字
+            for subview in view.subviews{
+                if subview.tag != 2{
+                    subview.removeFromSuperview()
+                }
+            }
+            let width = screenWidth / 2
+            let height = UIScreen.main.bounds.height / 3
+            let congratulateMessage = UITextView(frame: CGRect(x: width / 2, y: height, width: width, height: height))
+            congratulateMessage.font = UIFont(name: "Arial", size: 20)
+            congratulateMessage.text = "祝贺你！\n你已经通过了所有关卡！"
+            congratulateMessage.isEditable = false
+            congratulateMessage.textColor = UIColor.yellow
+            congratulateMessage.backgroundColor = nil
+            view.addSubview(congratulateMessage)
+            // 通关之后玩家可以再次闯关
+            savedLevel = 1
         }
     }
     
-//    @IBOutlet weak var solveButton: UIButton!
     @IBAction func askForSolution(_ button: UIButton) {
-//        button.isUserInteractionEnabled = false
         button.isEnabled = false
-        common.askForSolution()
+        askForSolution()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        makeFaceCellMatrix()
+        createFaceCellMatrix()
     }
     
     var level = savedLevel
-//    var solveChance = 30{
-//        didSet{
-//            if solveChance <= 0{
-//                disableButton(solveButton)
-//            }
-//        }
-//    }
+    // 记录所有关卡的行数和列数
     let rowAndColumnInAllLevels = [(2,2),(3,2),(3,3),(4,3),(4,4),(5,5),(6,6),(7,7),(8,8)]
     
-    func makeFaceCellMatrix(){
-//        disableButton(nextLevelButton)
+    func createFaceCellMatrix(){
         nextLevelButton.isEnabled = false
-        (common.row,common.column) = rowAndColumnInAllLevels[level - 1]
-        let FaceCellMatrix = common.makeFaceCellMatrix(self)
+        (row,column) = rowAndColumnInAllLevels[level - 1]
+        let FaceCellMatrix = makeFaceCellMatrix()
         FaceCellMatrix.delegate = self
         FaceCellMatrix.dataSource = self
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        common.collectionView(collectionView, didSelectItemAt:indexPath)
-        if common.faces.checkAllSmiles(){
-//            enableButton(nextLevelButton)
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        super.collectionView(collectionView, didSelectItemAt:indexPath)
+        // 如果达到过关要求，可以进入下一关
+        if faces.checkAllSmiles(){
             nextLevelButton.isEnabled = true
         }
     }
-    
-//    func disableButton(_ button: UIButton){
-//        button.isUserInteractionEnabled = false
-//        button.setTitleColor(UIColor.white, for: .normal)
-//        button.backgroundColor = UIColor.lightGray
-//    }
-//
-//    func enableButton(_ button: UIButton){
-//        button.isUserInteractionEnabled = true
-//        button.setTitleColor(UIColor.blue, for: .normal)
-//        button.backgroundColor = UIColor.green
-//    }
-    
 }
 
+// 全局变量，暂存通关进度，关闭 app 后失效
 var savedLevel = 1

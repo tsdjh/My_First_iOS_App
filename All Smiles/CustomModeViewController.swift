@@ -2,49 +2,43 @@
 //  CustomModeViewController.swift
 //  All Smiles
 //
-//  Created by 王东宇 on 2018/12/5.
+//  Created by qml on 2018/12/5.
 //
 
 import UIKit
 
-class CustomModeViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,GetRowAndColumnDelegate {
+// 自定义模式
+class CustomModeViewController: Common,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,GetRowAndColumnDelegate {
+    
+    // 通过 Delegate 机制，从上一个 viewController 中获得行数和列数
     func getRowAndColumn(_ controller: GetRowAndColumnViewController, rowNumber: Int, columnNumber: Int) {
-        common.row = rowNumber
-        common.column = columnNumber
-    }
-    
-    let common = Common()
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return common.faces.FaceMatrix.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return common.collectionView(collectionView, indexPath)
+        row = rowNumber
+        column = columnNumber
     }
     
     @IBAction func askForSolution(_ sender: UIButton) {
-        common.askForSolution()
+        super.askForSolution()
     }
     
+    // 重新生成随机阵列，行数和列数不变
     @IBAction func reset(_ sender: UIButton) {
         view.viewWithTag(1)!.removeFromSuperview()
-        makeFaceCellMatrix()
+        createFaceCellMatrix()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        makeFaceCellMatrix()
+        createFaceCellMatrix()
     }
     
-    func makeFaceCellMatrix(){
-        let FaceCellMatrix = common.makeFaceCellMatrix(self)
+    func createFaceCellMatrix(){
+        let FaceCellMatrix = makeFaceCellMatrix()
         FaceCellMatrix.delegate = self
         FaceCellMatrix.dataSource = self
     }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        common.collectionView(collectionView, didSelectItemAt:indexPath)
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        super.collectionView(collectionView,didSelectItemAt:indexPath)
     }
 }

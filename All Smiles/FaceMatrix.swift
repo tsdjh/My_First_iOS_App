@@ -2,11 +2,12 @@
 //  FaceMatrix.swift
 //  All Smiles
 //
-//  Created by 王东宇 on 2018/12/6.
+//  Created by qml on 2018/12/6.
 //
 
 import UIKit
 
+// 阵列存储以及解题算法
 class FaceMatrix{
     let row:Int
     let column:Int
@@ -27,6 +28,7 @@ class FaceMatrix{
         FaceMatrix = []
     }
     
+    // 检查是否满足通关条件
     func checkAllSmiles() -> Bool
     {
         for face in FaceMatrix{
@@ -41,6 +43,7 @@ class FaceMatrix{
         return FaceMatrix[i * column + j]
     }
     
+    // 如果随机产生的阵列无解，那么改变其中的一些表情，使阵列有解
     func ensureSolutionExists(){
         let (changeState,_) = solve()
         for (i,j) in changeState{
@@ -48,12 +51,23 @@ class FaceMatrix{
         }
     }
     
+    // 主算法
     func solve() -> ([(Int,Int)],[(Int,Int)]){
+        // 如果无解，存储需要改变的表情的位置
         var changeState = [(Int,Int)]()
+        
+        // 存储解，以便提示玩家
         var solution = [(Int,Int)]()
+        
         var temp = false
+        
+        // 给阵列额外添加一行和一列，用于存储中间数据
         var tempRow = Array(repeating: false, count: column)
         var tempColumn = Array(repeating: false, count: row)
+        
+        // 分情况讨论：行数和列数都是偶数；一奇一偶；都是奇数
+        // 详细的算法需要用到线性代数的知识，这里不写了
+        // 都是偶数（必然有解）：
         if row % 2 == 0 && column % 2 == 0{
             for i in 0..<row{
                 for j in 0..<column{
@@ -74,6 +88,7 @@ class FaceMatrix{
             }
         }
             
+        // 行奇列偶：
         else if row % 2 == 1 && column % 2 == 0{
             for i in 0..<row - 1{
                 for j in 0..<column{
@@ -112,6 +127,7 @@ class FaceMatrix{
             }
         }
             
+            // 行偶列奇，和行奇列偶的情况几乎完全一样
         else if row % 2 == 0 && column % 2 == 1{
             for j in 0..<column - 1{
                 for i in 0..<row{
@@ -150,6 +166,7 @@ class FaceMatrix{
             }
         }
             
+            // 都是奇数
         else {
             for i in 1..<row{
                 for j in 1..<column{
@@ -191,6 +208,7 @@ class FaceMatrix{
     }
 }
 
+// 为了方便运算，给 bool 型添加异或运算
 extension Bool{
     static func ^(left: Bool, right: Bool) -> Bool {
         switch (left,right) {

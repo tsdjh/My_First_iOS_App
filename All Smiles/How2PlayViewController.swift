@@ -2,7 +2,7 @@
 //  How2PlayViewController.swift
 //  All Smiles
 //
-//  Created by 王东宇 on 2019/1/10.
+//  Created by qml on 2019/1/10.
 //
 
 import UIKit

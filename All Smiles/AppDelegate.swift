@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  All Smiles
 //
-//  Created by 王东宇 on 2018/12/2.
+//  Created by qml on 2018/12/2.
 //
 
 import UIKit
