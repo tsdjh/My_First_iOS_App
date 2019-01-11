@@ -7,7 +7,12 @@
 
 import UIKit
 
-class CustomModeViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class CustomModeViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,GetRowAndColumnDelegate {
+    func getRowAndColumn(_ controller: GetRowAndColumnViewController, rowNumber: Int, columnNumber: Int) {
+        common.row = rowNumber
+        common.column = columnNumber
+    }
+    
     let common = Common()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -22,23 +27,14 @@ class CustomModeViewController: UIViewController,UICollectionViewDelegate,UIColl
         common.askForSolution()
     }
     
-    @IBAction func close(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func replay(_ sender: UIButton) {
-        InputRowAndColumn()
+    @IBAction func reset(_ sender: UIButton) {
+        view.viewWithTag(1)!.removeFromSuperview()
         makeFaceCellMatrix()
-    }
-    
-    func InputRowAndColumn(){
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        InputRowAndColumn()
         makeFaceCellMatrix()
     }
     
@@ -48,4 +44,7 @@ class CustomModeViewController: UIViewController,UICollectionViewDelegate,UIColl
         FaceCellMatrix.dataSource = self
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        common.collectionView(collectionView, didSelectItemAt:indexPath)
+    }
 }

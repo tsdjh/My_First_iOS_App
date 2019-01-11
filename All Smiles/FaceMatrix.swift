@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FaceMatrix {
+class FaceMatrix{
     let row:Int
     let column:Int
     var FaceMatrix = [Face]()

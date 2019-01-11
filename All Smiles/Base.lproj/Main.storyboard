@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yff-FN-6dK">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yM6-bj-gCb">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,84 +15,117 @@
             <objects>
                 <viewController id="l4v-vH-Gs3" customClass="BreakthroughModeViewController" customModule="All_Smiles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yvp-uL-luc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAF-A6-GyS">
-                                <rect key="frame" x="331" y="30" width="34" height="30"/>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="back"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0de-bJ-IwC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kl8-BN-T9X">
+                                <rect key="frame" x="157" y="103.33333333333331" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kl8-BN-T9X" secondAttribute="height" multiplier="1:1" id="MX2-No-ctm"/>
+                                </constraints>
+                                <state key="normal" image="LightedBulb"/>
+                                <state key="disabled" image="Bulb"/>
                                 <connections>
-                                    <action selector="close" destination="l4v-vH-Gs3" eventType="touchUpInside" id="uFp-xr-dKx"/>
-                                    <segue destination="Y9O-kR-3BS" kind="unwind" unwindAction="closeWithSegue:" id="aB8-yS-qby"/>
+                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="WkQ-Ak-v8j"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6KB-cK-ame">
-                                <rect key="frame" x="151.5" y="589" width="72" height="68"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMv-32-NvI">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Next Level"/>
-                                        <connections>
-                                            <action selector="nextLevel:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="mSz-OG-kOw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLQ-9n-RaU">
-                                        <rect key="frame" x="17" y="38" width="38" height="30"/>
-                                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Solve"/>
-                                        <connections>
-                                            <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="x1U-jF-yzG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G35-9V-uZK">
+                                <rect key="frame" x="272.66666666666669" y="103.33333333333331" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G35-9V-uZK" secondAttribute="height" multiplier="1:1" id="uFs-oe-zyS"/>
+                                </constraints>
+                                <state key="normal" image="LightedBulb"/>
+                                <state key="disabled" image="Bulb"/>
+                                <connections>
+                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="y8n-hj-Ra4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMv-32-NvI">
+                                <rect key="frame" x="145.66666666666666" y="719" width="122.99999999999997" height="100"/>
+                                <state key="normal" image="NextLevel"/>
+                                <state key="disabled" image="NextLevelUnabled"/>
+                                <connections>
+                                    <action selector="nextLevel:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="mSz-OG-kOw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-MR-PYO">
+                                <rect key="frame" x="41.333333333333343" y="103.33333333333331" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gka-MR-PYO" secondAttribute="height" multiplier="1:1" id="Kf8-Cl-Nra"/>
+                                </constraints>
+                                <state key="normal" image="LightedBulb"/>
+                                <state key="disabled" image="Bulb"/>
+                                <connections>
+                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="ReA-zR-ZGN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6KB-cK-ame" firstAttribute="bottom" secondItem="yvp-uL-luc" secondAttribute="bottom" constant="-10" id="1NY-cY-oZU"/>
-                            <constraint firstItem="ijd-IV-MPB" firstAttribute="trailing" secondItem="ZAF-A6-GyS" secondAttribute="trailing" constant="10" id="2dn-eE-1Kw"/>
-                            <constraint firstItem="6KB-cK-ame" firstAttribute="centerX" secondItem="yvp-uL-luc" secondAttribute="centerX" id="6UJ-M5-1Kj"/>
-                            <constraint firstItem="ZAF-A6-GyS" firstAttribute="top" secondItem="ijd-IV-MPB" secondAttribute="top" constant="10" id="X0Y-2v-xVh"/>
+                            <constraint firstItem="G35-9V-uZK" firstAttribute="trailing" secondItem="dXb-lG-Wux" secondAttribute="trailing" multiplier="0.9" id="4n3-fl-DD2"/>
+                            <constraint firstItem="G35-9V-uZK" firstAttribute="centerY" secondItem="kl8-BN-T9X" secondAttribute="centerY" id="696-OG-r6h"/>
+                            <constraint firstItem="0de-bJ-IwC" firstAttribute="bottom" secondItem="dXb-lG-Wux" secondAttribute="bottom" id="BLO-wA-tI9"/>
+                            <constraint firstItem="ZMv-32-NvI" firstAttribute="centerX" secondItem="yvp-uL-luc" secondAttribute="centerX" id="HPJ-iZ-jZG"/>
+                            <constraint firstItem="0de-bJ-IwC" firstAttribute="trailing" secondItem="dXb-lG-Wux" secondAttribute="trailing" id="LqK-QJ-wTd"/>
+                            <constraint firstItem="kl8-BN-T9X" firstAttribute="centerX" secondItem="yvp-uL-luc" secondAttribute="centerX" id="Q6w-aC-WVB"/>
+                            <constraint firstItem="G35-9V-uZK" firstAttribute="width" secondItem="kl8-BN-T9X" secondAttribute="width" id="Qil-Tc-Zrx"/>
+                            <constraint firstItem="Gka-MR-PYO" firstAttribute="width" secondItem="kl8-BN-T9X" secondAttribute="width" id="RDS-Ok-azf"/>
+                            <constraint firstItem="kl8-BN-T9X" firstAttribute="top" secondItem="dXb-lG-Wux" secondAttribute="bottom" multiplier="0.12" id="auT-Jg-ohO"/>
+                            <constraint firstItem="0de-bJ-IwC" firstAttribute="top" secondItem="dXb-lG-Wux" secondAttribute="top" constant="-44" id="eig-Pp-VoP"/>
+                            <constraint firstItem="Gka-MR-PYO" firstAttribute="leading" secondItem="dXb-lG-Wux" secondAttribute="trailing" multiplier="0.1" id="fZd-22-Alg"/>
+                            <constraint firstItem="0de-bJ-IwC" firstAttribute="leading" secondItem="dXb-lG-Wux" secondAttribute="leading" id="lZn-fA-YYj"/>
+                            <constraint firstItem="ZMv-32-NvI" firstAttribute="bottom" secondItem="dXb-lG-Wux" secondAttribute="bottom" multiplier="0.95" id="lcT-qA-Gp6"/>
+                            <constraint firstItem="Gka-MR-PYO" firstAttribute="centerY" secondItem="kl8-BN-T9X" secondAttribute="centerY" id="v7e-Ba-5M3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ijd-IV-MPB"/>
+                        <viewLayoutGuide key="safeArea" id="dXb-lG-Wux"/>
                     </view>
                     <connections>
                         <outlet property="nextLevelButton" destination="ZMv-32-NvI" id="wqg-ng-Kcv"/>
-                        <outlet property="solveButton" destination="wLQ-9n-RaU" id="Vie-Rk-A5k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5p-sT-LGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Y9O-kR-3BS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-370" y="-143"/>
+            <point key="canvasLocation" x="-371.01449275362324" y="-143.30357142857142"/>
         </scene>
-        <!--Main View Controller-->
+        <!--All Smiles-->
         <scene sceneID="gIb-jv-nas">
             <objects>
                 <viewController id="Yff-FN-6dK" customClass="MainViewController" customModule="All_Smiles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UEw-tp-nT6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dFB-Yn-Olf">
-                                <rect key="frame" x="119.5" y="395.5" width="136" height="76"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="lwc-Ut-Yry">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="ANJ-zL-gVL">
+                                <rect key="frame" x="168.66666666666666" y="386" width="77" height="124"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BN0-Ag-Xzu">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
                                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Breakthrough Mode"/>
+                                        <state key="normal" title="闯关模式"/>
                                         <connections>
                                             <segue destination="l4v-vH-Gs3" kind="show" id="fHs-Gq-m1e"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gev-fG-NKe">
-                                        <rect key="frame" x="0.0" y="46" width="136" height="30"/>
+                                        <rect key="frame" x="0.0" y="47" width="77" height="30"/>
                                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Custom Mode"/>
+                                        <state key="normal" title="自定义模式"/>
                                         <connections>
                                             <segue destination="jbl-yi-QLx" kind="show" id="pgL-4s-uHL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAG-QZ-jBx">
+                                        <rect key="frame" x="0.0" y="94" width="77" height="30"/>
+                                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="玩法介绍"/>
+                                        <connections>
+                                            <segue destination="uge-kg-1su" kind="show" id="BYU-6k-1tr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -100,110 +133,502 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dFB-Yn-Olf" firstAttribute="centerX" secondItem="UEw-tp-nT6" secondAttribute="centerX" id="2OB-6N-hPD"/>
-                            <constraint firstItem="dFB-Yn-Olf" firstAttribute="centerY" secondItem="UEw-tp-nT6" secondAttribute="centerY" constant="100" id="Xat-JP-3YF"/>
+                            <constraint firstItem="wTG-iN-Qez" firstAttribute="trailing" secondItem="lwc-Ut-Yry" secondAttribute="trailing" id="0a0-lm-0am"/>
+                            <constraint firstItem="ANJ-zL-gVL" firstAttribute="centerX" secondItem="wTG-iN-Qez" secondAttribute="centerX" id="OpN-zf-IF6"/>
+                            <constraint firstItem="lwc-Ut-Yry" firstAttribute="leading" secondItem="wTG-iN-Qez" secondAttribute="leading" id="RPy-vo-h23"/>
+                            <constraint firstItem="lwc-Ut-Yry" firstAttribute="top" secondItem="wTG-iN-Qez" secondAttribute="top" constant="-44" id="WaX-RS-qSA"/>
+                            <constraint firstItem="ANJ-zL-gVL" firstAttribute="centerY" secondItem="UEw-tp-nT6" secondAttribute="centerY" id="cgf-8V-LjK"/>
+                            <constraint firstItem="lwc-Ut-Yry" firstAttribute="bottom" secondItem="wTG-iN-Qez" secondAttribute="bottom" id="qMd-5g-NGX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="exR-rD-KlT"/>
+                        <viewLayoutGuide key="safeArea" id="wTG-iN-Qez"/>
                     </view>
+                    <navigationItem key="navigationItem" title="All Smiles" id="Rj3-lE-XVl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc5-zr-q6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="404" y="-143.47826086956522"/>
+            <point key="canvasLocation" x="1340.625" y="-145"/>
         </scene>
-        <!--Get Row And Column View Controller-->
+        <!--设置行数和列数-->
         <scene sceneID="M3I-bE-oV9">
             <objects>
                 <viewController id="jbl-yi-QLx" customClass="GetRowAndColumnViewController" customModule="All_Smiles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKZ-cs-kBi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSa-oa-DjU">
-                                <rect key="frame" x="248" y="93" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="back"/>
-                                <connections>
-                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="rbZ-Jz-9OH"/>
-                                    <action selector="close:" destination="jbl-yi-QLx" eventType="touchUpInside" id="1Ko-xP-a54"/>
-                                    <action selector="replay:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="8Ai-Vr-HfP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jQ-A3-tE1">
-                                <rect key="frame" x="222" y="532" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="ok"/>
-                                <connections>
-                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="aaM-M3-wRR"/>
-                                    <action selector="replay:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="QRT-aA-L1H"/>
-                                    <segue destination="6AM-dw-Sjd" kind="show" id="BvF-bb-ac0"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dD-40-xzM">
-                                <rect key="frame" x="124" y="231" width="251" height="156"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zys-UV-JYq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="71D-YR-oTB">
+                                <rect key="frame" x="10" y="331.33333333333331" width="394" height="233.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入行数和列数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDn-m2-UtT">
+                                        <rect key="frame" x="0.0" y="0.0" width="219" height="29.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.94275027513504028" green="0.15787132536809878" blue="0.12890404234983752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.69803921568627447" green="0.73333333333333328" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="aUT-aG-SIT">
+                                        <rect key="frame" x="0.0" y="101.66666666666669" width="387.33333333333331" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="行数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4g1-6b-PCE">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.69411764705882351" green="0.72549019607843135" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="lpr-cY-e0G">
+                                                <rect key="frame" x="96.333333333333314" y="0.0" width="244" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="INS-5E-W8q"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="setRowNumber" destination="jbl-yi-QLx" eventType="valueChanged" id="QoM-ff-e4h"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teJ-bU-Pl9">
+                                                <rect key="frame" x="375.33333333333331" y="0.0" width="12" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.70196078431372544" green="0.72156862745098038" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-WF-jJW">
+                                        <rect key="frame" x="0.0" y="203.66666666666669" width="387.33333333333331" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="列数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-yu-Zwd">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.70196078431372544" green="0.72156862745098038" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="uHT-eh-Zmr">
+                                                <rect key="frame" x="96.333333333333314" y="0.0" width="244" height="31"/>
+                                                <connections>
+                                                    <action selector="setColumnNumber" destination="jbl-yi-QLx" eventType="valueChanged" id="SqH-TT-87w"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjH-EV-ATJ">
+                                                <rect key="frame" x="375.33333333333331" y="0.0" width="12" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.68235294117647061" green="0.70588235294117652" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lpr-cY-e0G" firstAttribute="height" secondItem="uHT-eh-Zmr" secondAttribute="height" id="CK1-9L-VPC"/>
+                                    <constraint firstItem="lpr-cY-e0G" firstAttribute="centerX" secondItem="uHT-eh-Zmr" secondAttribute="centerX" id="LRy-J3-wBi"/>
+                                    <constraint firstItem="teJ-bU-Pl9" firstAttribute="width" secondItem="fjH-EV-ATJ" secondAttribute="width" id="OXf-OT-Bsf"/>
+                                    <constraint firstAttribute="trailing" secondItem="aUT-aG-SIT" secondAttribute="trailing" constant="6.6666666666666856" id="QJV-dE-p17"/>
+                                    <constraint firstItem="teJ-bU-Pl9" firstAttribute="centerX" secondItem="fjH-EV-ATJ" secondAttribute="centerX" id="d2k-5P-Lbf"/>
+                                    <constraint firstItem="lpr-cY-e0G" firstAttribute="width" secondItem="uHT-eh-Zmr" secondAttribute="width" id="yK0-bh-UgX"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="k7p-29-mKD"/>
+                        <constraints>
+                            <constraint firstItem="YUp-hn-Boe" firstAttribute="trailing" secondItem="71D-YR-oTB" secondAttribute="trailing" constant="10" id="00i-Y8-Bpe"/>
+                            <constraint firstItem="71D-YR-oTB" firstAttribute="centerY" secondItem="dKZ-cs-kBi" secondAttribute="centerY" id="NkK-WO-gxd"/>
+                            <constraint firstItem="71D-YR-oTB" firstAttribute="centerX" secondItem="dKZ-cs-kBi" secondAttribute="centerX" id="SZo-ZH-A9h"/>
+                            <constraint firstItem="zys-UV-JYq" firstAttribute="trailing" secondItem="YUp-hn-Boe" secondAttribute="trailing" id="c2f-Ii-eL2"/>
+                            <constraint firstItem="zys-UV-JYq" firstAttribute="top" secondItem="YUp-hn-Boe" secondAttribute="top" constant="-44" id="dCP-NZ-Gom"/>
+                            <constraint firstItem="zys-UV-JYq" firstAttribute="bottom" secondItem="YUp-hn-Boe" secondAttribute="bottom" id="ed4-1y-Opn"/>
+                            <constraint firstItem="zys-UV-JYq" firstAttribute="leading" secondItem="YUp-hn-Boe" secondAttribute="leading" id="nce-92-tCB"/>
+                            <constraint firstItem="71D-YR-oTB" firstAttribute="leading" secondItem="YUp-hn-Boe" secondAttribute="leading" constant="10" id="uzW-0O-M0K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YUp-hn-Boe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="设置行数和列数" id="gV1-rd-EZO">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="bdT-26-wiv">
+                            <connections>
+                                <action selector="done:" destination="jbl-yi-QLx" id="Pqm-AP-Wav"/>
+                                <segue destination="6AM-dw-Sjd" kind="show" identifier="GetRowAndColumn" id="98r-Oa-oJ8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="columnNumberLabel" destination="fjH-EV-ATJ" id="gfI-4S-Pga"/>
+                        <outlet property="columnSlider" destination="uHT-eh-Zmr" id="7wu-Vr-Y8R"/>
+                        <outlet property="rowNumberLabel" destination="teJ-bU-Pl9" id="god-y3-l1H"/>
+                        <outlet property="rowSlider" destination="lpr-cY-e0G" id="d3k-g1-rGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahX-I3-R8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101.5999999999999" y="-143.47826086956522"/>
+            <point key="canvasLocation" x="2040.5797101449277" y="-143.97321428571428"/>
         </scene>
         <!--Custom Mode View Controller-->
         <scene sceneID="6T9-37-oKK">
             <objects>
                 <viewController id="6AM-dw-Sjd" customClass="CustomModeViewController" customModule="All_Smiles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GJi-gN-PLb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY5-Pk-EAC">
-                                <rect key="frame" x="234" y="104" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="back"/>
-                                <connections>
-                                    <action selector="close" destination="l4v-vH-Gs3" eventType="touchUpInside" id="J74-Yq-EMR"/>
-                                    <action selector="close:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="gEA-Ar-cfp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkl-aZ-9C3">
-                                <rect key="frame" x="228" y="290" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Replay"/>
-                                <connections>
-                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="vRt-Uc-KGs"/>
-                                    <action selector="replay:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="MBS-BG-aTg"/>
-                                    <segue destination="jbl-yi-QLx" kind="show" id="Fwo-Ws-xt9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hij-5a-mKA">
-                                <rect key="frame" x="228" y="197" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Solve"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Laz-AT-259">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hij-5a-mKA">
+                                <rect key="frame" x="174" y="103.33333333333334" width="66" height="66.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hij-5a-mKA" secondAttribute="height" multiplier="1:1" id="U7U-tr-jfO"/>
+                                </constraints>
+                                <state key="normal" image="LightedBulb"/>
                                 <connections>
                                     <action selector="askForSolution:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="4CJ-p1-TkA"/>
-                                    <action selector="askForSolution:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="vVK-Mr-sfP"/>
-                                    <action selector="solve:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="o2w-Pd-wiA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBo-zV-Wex">
+                                <rect key="frame" x="165.66666666666666" y="736" width="82.666666666666657" height="83"/>
+                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NBo-zV-Wex" secondAttribute="height" multiplier="1:1" id="IPn-x8-sxe"/>
+                                </constraints>
+                                <state key="normal" image="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="LtE-j2-o7i"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="oIb-Fe-4JO"/>
+                        <constraints>
+                            <constraint firstItem="hij-5a-mKA" firstAttribute="centerX" secondItem="GJi-gN-PLb" secondAttribute="centerX" id="9RY-fa-zRw"/>
+                            <constraint firstItem="Laz-AT-259" firstAttribute="top" secondItem="RbI-Vg-dN3" secondAttribute="top" constant="-44" id="9UF-ix-zwL"/>
+                            <constraint firstItem="Laz-AT-259" firstAttribute="leading" secondItem="RbI-Vg-dN3" secondAttribute="leading" id="Gj2-7W-J3J"/>
+                            <constraint firstItem="NBo-zV-Wex" firstAttribute="centerX" secondItem="GJi-gN-PLb" secondAttribute="centerX" id="N6C-vn-eYG"/>
+                            <constraint firstItem="Laz-AT-259" firstAttribute="trailing" secondItem="RbI-Vg-dN3" secondAttribute="trailing" id="T20-cv-faH"/>
+                            <constraint firstItem="NBo-zV-Wex" firstAttribute="bottom" secondItem="RbI-Vg-dN3" secondAttribute="bottom" multiplier="0.95" id="UaZ-F9-v60"/>
+                            <constraint firstItem="hij-5a-mKA" firstAttribute="top" secondItem="RbI-Vg-dN3" secondAttribute="bottom" multiplier="0.12" id="cgU-Rq-Cz0"/>
+                            <constraint firstItem="hij-5a-mKA" firstAttribute="leading" secondItem="RbI-Vg-dN3" secondAttribute="trailing" multiplier="0.42" id="hGP-eU-SIN"/>
+                            <constraint firstItem="NBo-zV-Wex" firstAttribute="leading" secondItem="RbI-Vg-dN3" secondAttribute="trailing" multiplier="0.4" id="lS7-ei-8Ht"/>
+                            <constraint firstItem="Laz-AT-259" firstAttribute="bottom" secondItem="RbI-Vg-dN3" secondAttribute="bottom" id="wFw-bH-Ou6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RbI-Vg-dN3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdt-EW-JPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="-143"/>
+            <point key="canvasLocation" x="2742.0289855072465" y="-143.97321428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3tY-8R-5rS">
+            <objects>
+                <viewController id="uge-kg-1su" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8V-D5-mSF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="CN9-1H-Kvc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-p9-gdD">
+                                <rect key="frame" x="10" y="258.66666666666674" width="394" height="517"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="        ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="有">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="mn">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="个单元格排成">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="m*n">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="的阵列，每个单元格有微笑和沮丧两种表情。单元格可以被点击，点击一个单元格会使与它同行或者同列（包括自己）的表情发生改变，即">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="“">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="微笑">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="”">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="变成">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="“">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="沮丧">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="”">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="，">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="“">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="沮丧">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="”">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="变成">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="“">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="微笑">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="”">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="。刚开始所有单元格的表情随机。你的任务是将所有的单元格都变成">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="“">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="微笑">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="”">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="，保证有解哦：）">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="         ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="提供了两种玩法模式，一种是闯关模式，共有三次提示机会，成功闯过所有关卡会有惊喜哦">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="^_^">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="（你问一共有多少关，天机不可泄露，等你自己来探索，放心不会很多哦）。另一种模式是自定义模式，你可以自由选择行数和列数，提示不限次数，可以用来练习，找找规律。">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="         ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="话休絮烦，请开始你的表演吧！">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name="GillSans-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Smiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-Vz-h2W">
+                                <rect key="frame" x="82.666666666666671" y="86.333333333333329" width="248.66666666666663" height="172.33333333333337"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Go7-Vz-h2W" firstAttribute="centerX" secondItem="JZk-DQ-fup" secondAttribute="centerX" id="3Ls-lg-jK9"/>
+                            <constraint firstItem="IO1-p9-gdD" firstAttribute="leading" secondItem="JZk-DQ-fup" secondAttribute="leading" constant="10" id="7MP-xo-3gq"/>
+                            <constraint firstItem="Go7-Vz-h2W" firstAttribute="bottom" secondItem="JZk-DQ-fup" secondAttribute="bottom" multiplier="0.3" id="EP5-b2-RuB"/>
+                            <constraint firstItem="Go7-Vz-h2W" firstAttribute="top" secondItem="JZk-DQ-fup" secondAttribute="bottom" multiplier="0.1" id="F3o-37-7qO"/>
+                            <constraint firstItem="CN9-1H-Kvc" firstAttribute="leading" secondItem="JZk-DQ-fup" secondAttribute="leading" id="Kqc-3X-Bai"/>
+                            <constraint firstItem="CN9-1H-Kvc" firstAttribute="top" secondItem="JZk-DQ-fup" secondAttribute="top" constant="-44" id="Qvb-wM-EbB"/>
+                            <constraint firstItem="IO1-p9-gdD" firstAttribute="centerX" secondItem="JZk-DQ-fup" secondAttribute="centerX" id="XOl-Hx-hbq"/>
+                            <constraint firstItem="IO1-p9-gdD" firstAttribute="bottom" secondItem="JZk-DQ-fup" secondAttribute="bottom" multiplier="0.9" id="YLg-J0-zmF"/>
+                            <constraint firstItem="IO1-p9-gdD" firstAttribute="top" secondItem="Go7-Vz-h2W" secondAttribute="bottom" id="Zcg-2j-hwV"/>
+                            <constraint firstItem="Go7-Vz-h2W" firstAttribute="leading" secondItem="JZk-DQ-fup" secondAttribute="trailing" multiplier="0.2" id="lOh-L5-dUh"/>
+                            <constraint firstItem="JZk-DQ-fup" firstAttribute="bottom" secondItem="CN9-1H-Kvc" secondAttribute="bottom" id="lda-Xa-Kp0"/>
+                            <constraint firstItem="JZk-DQ-fup" firstAttribute="trailing" secondItem="CN9-1H-Kvc" secondAttribute="trailing" id="pMZ-QU-8qq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JZk-DQ-fup"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vG7-pl-t17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3424.6376811594205" y="-143.97321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nga-ZP-asS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yM6-bj-gCb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oky-xJ-ay1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yff-FN-6dK" kind="relationship" relationship="rootViewController" id="Gre-VR-IdV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPp-QO-RPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="-143.47826086956522"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pgL-4s-uHL"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Background" width="150" height="250"/>
+        <image name="Bulb" width="100" height="100"/>
+        <image name="LightedBulb" width="100" height="100"/>
+        <image name="NextLevel" width="123" height="100"/>
+        <image name="NextLevelUnabled" width="123" height="100"/>
+        <image name="Reset" width="100" height="100"/>
+    </resources>
 </document>

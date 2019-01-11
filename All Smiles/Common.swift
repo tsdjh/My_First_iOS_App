@@ -22,7 +22,7 @@ class Common {
     
     func makeFaceCellMatrix(_ viewController: UIViewController) -> UICollectionView{
         let layout = UICollectionViewFlowLayout()
-        var margin = screenWidth / CGFloat(11 * column + 3)
+        var margin = screenWidth / CGFloat(11 * max(column,row) + 3)
         if margin > 10{
             margin = 10
         }
@@ -35,13 +35,16 @@ class Common {
         let FaceCellMatrix = UICollectionView(frame: CGRect(x: 0, y: 0, width: MatrixWidth, height: MatrixHeight), collectionViewLayout: layout)
         FaceCellMatrix.center = viewController.view.center
         FaceCellMatrix.tag = 1
-            
         FaceCellMatrix.register(FaceCell.self, forCellWithReuseIdentifier: "FaceCell")
         FaceCellMatrix.translatesAutoresizingMaskIntoConstraints = false
-        while faces.checkAllSmiles(){
+//        while faces.checkAllSmiles(){
+//            faces = FaceMatrix(row: row,column: column,sidelength: sidelength)
+//            faces.ensureSolutionExists()
+//        }
+        repeat{
             faces = FaceMatrix(row: row,column: column,sidelength: sidelength)
             faces.ensureSolutionExists()
-        }
+        }while faces.checkAllSmiles()
         viewController.view.addSubview(FaceCellMatrix)
         return FaceCellMatrix
     }

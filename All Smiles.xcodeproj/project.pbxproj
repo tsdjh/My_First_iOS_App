@@ -18,6 +18,7 @@
 		9D46F36821B3BB8400DBC39D /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46F36721B3BB8400DBC39D /* Face.swift */; };
 		9D593C1721B8D23600F05272 /* GetRowAndColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D593C1621B8D23600F05272 /* GetRowAndColumnViewController.swift */; };
 		9D5E8E5F21B63F8500FB25B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5E8E5E21B63F8500FB25B7 /* MainViewController.swift */; };
+		9D69FDDE21E77DBE00193F2D /* How2PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69FDDD21E77DBE00193F2D /* How2PlayViewController.swift */; };
 		9DB5577A21B4D3BB00C4EC5B /* FaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5577921B4D3BB00C4EC5B /* FaceCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		9D46F36721B3BB8400DBC39D /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		9D593C1621B8D23600F05272 /* GetRowAndColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRowAndColumnViewController.swift; sourceTree = "<group>"; };
 		9D5E8E5E21B63F8500FB25B7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9D69FDDD21E77DBE00193F2D /* How2PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How2PlayViewController.swift; sourceTree = "<group>"; };
 		9DB5577921B4D3BB00C4EC5B /* FaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				9D593C1621B8D23600F05272 /* GetRowAndColumnViewController.swift */,
 				9D0DF4B121B93DFE005C5FF2 /* FaceMatrix.swift */,
 				9D0DF4B321B95398005C5FF2 /* Common.swift */,
+				9D69FDDD21E77DBE00193F2D /* How2PlayViewController.swift */,
 			);
 			path = "All Smiles";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				9DB5577A21B4D3BB00C4EC5B /* FaceCell.swift in Sources */,
 				9D2BA74321B3B36F00EFCD08 /* BreakthroughModeViewController.swift in Sources */,
 				9D1E9DAB21B81C9200F037C5 /* CustomModeViewController.swift in Sources */,
+				9D69FDDE21E77DBE00193F2D /* How2PlayViewController.swift in Sources */,
 				9D593C1721B8D23600F05272 /* GetRowAndColumnViewController.swift in Sources */,
 				9D46F36821B3BB8400DBC39D /* Face.swift in Sources */,
 				9D2BA74121B3B36F00EFCD08 /* AppDelegate.swift in Sources */,
