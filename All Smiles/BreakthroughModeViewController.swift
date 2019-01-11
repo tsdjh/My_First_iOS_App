@@ -13,7 +13,13 @@ class BreakthroughModeViewController: Common,UICollectionViewDelegate,UICollecti
     // Common 类集中了两种玩法模式相同的代码
     @IBOutlet weak var nextLevelButton: UIButton!
     
-    @IBAction func nextLevel(_ sender: UIButton) {
+    @IBOutlet weak var solveButton0: UIButton!
+    
+    @IBOutlet weak var solveButton1: UIButton!
+    
+    @IBOutlet weak var solveButton2: UIButton!
+    
+    @IBAction func nextLevel() {
         // 进入下一关
         if level <= 8{
             level += 1
@@ -44,12 +50,22 @@ class BreakthroughModeViewController: Common,UICollectionViewDelegate,UICollecti
     
     @IBAction func askForSolution(_ button: UIButton) {
         button.isEnabled = false
+        if solveButtonsEnabled[0]{
+            solveButtonsEnabled[0] = false
+        }else if solveButtonsEnabled[1]{
+            solveButtonsEnabled[1] = false
+        }else{
+            solveButtonsEnabled[2] = false
+        }
         askForSolution()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        solveButton0.isEnabled = solveButtonsEnabled[0]
+        solveButton1.isEnabled = solveButtonsEnabled[1]
+        solveButton2.isEnabled = solveButtonsEnabled[2]
         createFaceCellMatrix()
     }
     
@@ -76,3 +92,5 @@ class BreakthroughModeViewController: Common,UICollectionViewDelegate,UICollecti
 
 // 全局变量，暂存通关进度，关闭 app 后失效
 var savedLevel = 1
+
+var solveButtonsEnabled = [true,true,true]

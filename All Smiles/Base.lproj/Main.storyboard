@@ -48,7 +48,7 @@
                                 <state key="normal" image="NextLevel"/>
                                 <state key="disabled" image="NextLevelUnabled"/>
                                 <connections>
-                                    <action selector="nextLevel:" destination="l4v-vH-Gs3" eventType="touchUpInside" id="mSz-OG-kOw"/>
+                                    <action selector="nextLevel" destination="l4v-vH-Gs3" eventType="touchUpInside" id="fWT-qo-BaG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-MR-PYO">
@@ -83,7 +83,10 @@
                         <viewLayoutGuide key="safeArea" id="dXb-lG-Wux"/>
                     </view>
                     <connections>
-                        <outlet property="nextLevelButton" destination="ZMv-32-NvI" id="wqg-ng-Kcv"/>
+                        <outlet property="nextLevelButton" destination="ZMv-32-NvI" id="drx-5y-mMk"/>
+                        <outlet property="solveButton0" destination="Gka-MR-PYO" id="lWW-Y6-Bmp"/>
+                        <outlet property="solveButton1" destination="kl8-BN-T9X" id="ylh-z2-bei"/>
+                        <outlet property="solveButton2" destination="G35-9V-uZK" id="A7f-iA-cwI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5p-sT-LGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -287,7 +290,7 @@
                                 </constraints>
                                 <state key="normal" image="LightedBulb"/>
                                 <connections>
-                                    <action selector="askForSolution:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="4CJ-p1-TkA"/>
+                                    <action selector="solve" destination="6AM-dw-Sjd" eventType="touchUpInside" id="0gT-Ea-zxz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBo-zV-Wex">
@@ -298,7 +301,7 @@
                                 </constraints>
                                 <state key="normal" image="Reset"/>
                                 <connections>
-                                    <action selector="reset:" destination="6AM-dw-Sjd" eventType="touchUpInside" id="LtE-j2-o7i"/>
+                                    <action selector="reset" destination="6AM-dw-Sjd" eventType="touchUpInside" id="Fvo-84-Y4b"/>
                                 </connections>
                             </button>
                         </subviews>

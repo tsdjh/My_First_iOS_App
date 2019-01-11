@@ -16,12 +16,12 @@ class CustomModeViewController: Common,UICollectionViewDelegate,UICollectionView
         column = columnNumber
     }
     
-    @IBAction func askForSolution(_ sender: UIButton) {
-        super.askForSolution()
+    @IBAction func solve() {
+        askForSolution()
     }
     
     // 重新生成随机阵列，行数和列数不变
-    @IBAction func reset(_ sender: UIButton) {
+    @IBAction func reset() {
         view.viewWithTag(1)!.removeFromSuperview()
         createFaceCellMatrix()
     }
